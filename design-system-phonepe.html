@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Design System | Subhajit Mondal</title>
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    <!-- Project Specific CSS -->
+    <link rel="stylesheet" href="project.css">
+    <!-- Include index.css for footer styles -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Navigation (Matched to Index Page) -->
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">Subhajit Mondal.</a>
+            <div class="nav-pill">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#work">Works</a>
+                    <a href="index.html#about">About</a>
+                    <a href="#">Resume</a>
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Sticky Legend (Left Pane) -->
+    <aside class="legend-sidebar">
+        <div class="legend-widget">
+            <div class="legend-item" data-target="hero">Title</div>
+            <div class="legend-item" data-target="problem">Problem</div>
+            <div class="legend-item" data-target="solution">Solution</div>
+            <div class="legend-item" data-target="process">Design Process</div>
+            <div class="legend-item" data-target="dynamic-palettes">Dynamic Palettes</div>
+            <div class="legend-item" data-target="foundational-elements">Foundational Elements</div>
+            <div class="legend-item" data-target="typography">Typography</div>
+            <div class="legend-item" data-target="colors">Colors</div>
+            <div class="legend-item" data-target="spacial-system">Spacial System</div>
+            <div class="legend-item" data-target="elevation">Elevation</div>
+            <div class="legend-item" data-target="borders">Borders</div>
+            <div class="legend-item" data-target="ui-components">UI Components</div>
+            <div class="legend-item" data-target="action-menu">Action Menu</div>
+            <div class="legend-item" data-target="avatars">Avatars</div>
+            <div class="legend-item" data-target="bottom-sheet">Bottom Sheet</div>
+            <div class="legend-item" data-target="bottom-navigation-bar">Bottom Navigation Bar</div>
+            <div class="legend-item" data-target="brand-logo">Brand Logos</div>
+            <div class="legend-item" data-target="buttons">Buttons</div>
+            <div class="legend-item" data-target="cards">Cards</div>
+            <div class="legend-item" data-target="carousel">Carousel</div>
+            <div class="legend-item" data-target="chat-bubble">Chat Bubble</div>
+            <div class="legend-item" data-target="check-box-radio-button">Check Box + Radio Button</div>
+            <div class="legend-item" data-target="chips">Chips</div>
+            <div class="legend-item" data-target="coach-mark">Coach Mark</div>
+            <div class="legend-item" data-target="counter">Counter</div>
+            <div class="legend-item" data-target="date-picker">Date Picker</div>
+            <div class="legend-item" data-target="dialog-box">Dialog Box</div>
+            <div class="legend-item" data-target="filters">Filters</div>
+            <div class="legend-item" data-target="input-field">Input Field</div>
+            <div class="legend-item" data-target="keyboard">Keyboard</div>
+            <div class="legend-item" data-target="list-items">List Items</div>
+            <div class="legend-item" data-target="notes">Notes</div>
+            <div class="legend-item" data-target="notification-badge">Notification Badge</div>
+            <div class="legend-item" data-target="overlay">Overlay</div>
+            <div class="legend-item" data-target="page-header">Page Header</div>
+            <div class="legend-item" data-target="progress-bar">Progress Bar</div>
+            <div class="legend-item" data-target="project-tracker">Project Tracker + Timeline View</div>
+            <div class="legend-item" data-target="ribbon">Ribbon</div>
+            <div class="legend-item" data-target="search">Search</div>
+            <div class="legend-item" data-target="section-message">Section Message</div>
+            <div class="legend-item" data-target="separator">Separator</div>
+            <div class="legend-item" data-target="snackbar">Snackbar</div>
+            <div class="legend-item" data-target="stepper">Stepper</div>
+            <div class="legend-item" data-target="tabs">Tabs</div>
+            <div class="legend-item" data-target="tags">Tags</div>
+            <div class="legend-item" data-target="title-bars">Title Bars</div>
+            <div class="legend-item" data-target="toggle">Toggle</div>
+            <div class="legend-item" data-target="tooltip">Tooltip</div>
+            <div class="legend-item" data-target="uploads">Uploads</div>
+            <div class="legend-item" data-target="video-player">Video Player</div>
+            <div class="legend-item" data-target="implementation">Implementation</div>
+            <div class="legend-item" data-target="results">Results</div>
+            <div class="legend-item" data-target="benefits">Benefits</div>
+            <div class="legend-item" data-target="conclusion">Conclusion</div>
+        </div>
+    </aside>
+
+    <!-- Main Content AREA -->
+    <main class="container-narrow">
+        <!-- 1. Hero Block -->
+        <header id="hero" class="project-hero reveal">
+            <h1>Building the PhonePe Design System</h1>
+            <div class="project-meta">
+                <span>Design System</span>
+                <span>•</span>
+                <span>Styleguide</span>
+                <span>•</span>
+                <span>UI Library</span>
+            </div>
+        </header>
+
+        <!-- 2. Full Width Image Block (Cover) -->
+        <div class="reveal">
+            <div class="layout-full-img">
+                <img src="res/design-system-phonepe/hero-gif.gif" alt="PhonePe Design System">
+            </div>
+        </div>
+
+        <!-- 3. Text Block (Intro) -->
+        <section id="problem" class="reveal">
+            <div class="layout-text">
+                <h3>Problem Statement</h3>
+                <p>PhonePe, a leading digital payments platform in India, had a problem with design consistency. With
+                    multiple pods and designers working on different features, the UI elements used in the designs from
+                    each pod looked different. This made the app look cluttered and unprofessional.
+                </p>
+            </div>
+        </section>
+
+        <section id="solution" class="reveal">
+            <div class="layout-text">
+                <h3>Solution</h3>
+                <p>To solve this problem, We decided to rebuild its existing design system and come up with guidelines
+                    for UI design. The new design system consists of foundational elements, UI components, and detailed
+                    guidelines on their usage.
+                </p>
+            </div>
+        </section>
+
+        <section id="process" class="reveal">
+            <div class="layout-text">
+                <h3>Design Process</h3>
+                <p>➡️ <b>Research:</b> The first step was to research to understand the current state of UI design at
+                    PhonePe. We interviewed designers from different pods to identify common pain points
+                    and areas of inconsistency.
+                    <br><br>
+                    ➡️ <b>Audit:</b> We then conducted an audit of the existing design system to identify all of
+                    the UI elements that were being used. We also looked at other design systems from popular apps and
+                    websites to see what best practices were being followed.
+                    <br><br>
+                    ➡️ <b>Design:</b> Once the team had a good understanding of the current state of UI design at
+                    PhonePe and the best practices being followed in the industry, we began designing the new design
+                    system. We created a set of foundational elements, such as colors, fonts, and spacing, as well as
+                    a set of UI components, such as buttons, inputs, and menus.
+                    <br><br>
+                    ➡️ <b>Guidelines:</b> We also created a set of detailed guidelines on the usage of the
+                    foundational elements and UI components. These guidelines included information on how to use each
+                    element in different contexts, as well as examples of good and bad usage.
+                </p>
+            </div>
+        </section>
+
+        <section id="dynamic-palettes" class="reveal">
+            <div class="layout-text">
+                <h3>Color Handling in Light, Dark, and Dark Purple Modes</h3>
+                <p>The PhonePe design system includes colors for both light and dark modes, as well as the current dark
+                    purple mode of PhonePe. The dark purple mode will be eventually replaced with the dark mode, but it
+                    is still included in the design system to support older devices and users who have not yet switched
+                    to the dark mode.
+                </p>
+            </div>
+        </section>
+
+
+
+        <!-- Foundational Elements -->
+        <section id="foundational-elements" class="reveal">
+            <div class="layout-text">
+                <h3>Foundational Elements</h3>
+                <!--Can put paragraph here as well-->
+            </div>
+            <div class="toggle-list">
+
+                <!-- Toggle Item Typography -->
+                <div class="toggle-item" id="typography">
+                    <button class="toggle-header">
+                        Typography
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/typography.png" alt="Typography">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Colors -->
+                <div class="toggle-item" id="colors">
+                    <button class="toggle-header">
+                        Colors
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/colors.png" alt="Colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Spacial System -->
+                <div class="toggle-item" id="spacial-system">
+                    <button class="toggle-header">
+                        Spacial System
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/spacial-system.png" alt="Spacial System">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Elevation -->
+                <div class="toggle-item" id="elevation">
+                    <button class="toggle-header">
+                        Elevation
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/elevation.png" alt="Elevation">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Borders -->
+                <div class="toggle-item" id="borders">
+                    <button class="toggle-header">
+                        Borders
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/borders.png" alt="Borders">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <br>
+
+
+        <!-- UI Components -->
+        <section id="ui-components" class="reveal">
+            <div class="layout-text">
+                <h3>UI Components</h3>
+                <!--Can put paragraph here as well-->
+            </div>
+            <div class="toggle-list">
+
+                <!-- Toggle Item Action Menu -->
+                <div class="toggle-item" id="action-menu">
+                    <button class="toggle-header">
+                        Action Menu
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/action-menu.png" alt="Action Menu">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Avatars -->
+                <div class="toggle-item" id="avatars">
+                    <button class="toggle-header">
+                        Avatars
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/avatars.png" alt="Avatars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Bottom Sheet -->
+                <div class="toggle-item" id="bottom-sheet">
+                    <button class="toggle-header">
+                        Bottom Sheet
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/bottom-sheet.png" alt="Bottom Sheet">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Bottom Navigation Bar -->
+                <div class="toggle-item" id="bottom-navigation-bar">
+                    <button class="toggle-header">
+                        Bottom Navigation Bar
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/bottom-navigation-bar.png" alt="Bottom Navigation Bar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Brand Logos -->
+                <div class="toggle-item" id="brand-logo">
+                    <button class="toggle-header">
+                        Brand Logos
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/brand-logo.png" alt="Brand Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Buttons -->
+                <div class="toggle-item" id="buttons">
+                    <button class="toggle-header">
+                        Buttons
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/buttons.png" alt="Buttons">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Cards -->
+                <div class="toggle-item" id="cards">
+                    <button class="toggle-header">
+                        Cards
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/cards.png" alt="Cards">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Carousel -->
+                <div class="toggle-item" id="carousel">
+                    <button class="toggle-header">
+                        Carousel
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/carousel.png" alt="Carousel">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Chat Bubble -->
+                <div class="toggle-item" id="chat-bubble">
+                    <button class="toggle-header">
+                        Chat Bubble
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/chat-bubble.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Check Box + Radio Button -->
+                <div class="toggle-item" id="check-box-radio-button">
+                    <button class="toggle-header">
+                        Check Box + Radio Button
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/check-box-radio-button.png"
+                                alt="Check Box + Radio Button">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Chips -->
+                <div class="toggle-item" id="chips">
+                    <button class="toggle-header">
+                        Chips
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/chips.png" alt="chips">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Coach Mark -->
+                <div class="toggle-item" id="coach-mark">
+                    <button class="toggle-header">
+                        Coach Mark
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/coach-mark.png" alt="Coach Mark">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Counter -->
+                <div class="toggle-item" id="counter">
+                    <button class="toggle-header">
+                        Counter
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/counter.png" alt="Counter">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Date Picker -->
+                <div class="toggle-item" id="date-picker">
+                    <button class="toggle-header">
+                        Date Picker
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/date-picker.png" alt="Date Picker">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Dialog Box -->
+                <div class="toggle-item" id="dialog-box">
+                    <button class="toggle-header">
+                        Dialog Box
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/dialog-box.png" alt="Dialog Box">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Filters -->
+                <div class="toggle-item" id="filters">
+                    <button class="toggle-header">
+                        Filters
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/filters.png" alt="Filters">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Input Field -->
+                <div class="toggle-item" id="input-field">
+                    <button class="toggle-header">
+                        Input Field
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/input-field.png" alt="Input Field">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Keyboard -->
+                <div class="toggle-item" id="keyboard">
+                    <button class="toggle-header">
+                        Keyboard
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/keyboard.png" alt="Keyboard">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item List Items -->
+                <div class="toggle-item" id="list-items">
+                    <button class="toggle-header">
+                        List Items
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/list-items.png" alt="List Items">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Notes -->
+                <div class="toggle-item" id="notes">
+                    <button class="toggle-header">
+                        Notes
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/notes.png" alt="Notes">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Notification Badge -->
+                <div class="toggle-item" id="notification-badge">
+                    <button class="toggle-header">
+                        Notification Badge
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/notification-badge.png" alt="Notification Badge">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Overlay -->
+                <div class="toggle-item" id="overlay">
+                    <button class="toggle-header">
+                        Overlay
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/overlay.png" alt="Overlay">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Page Header -->
+                <div class="toggle-item" id="page-header">
+                    <button class="toggle-header">
+                        Page Header
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/page-header.png" alt="Page Header">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Progress Bar -->
+                <div class="toggle-item" id="progress-bar">
+                    <button class="toggle-header">
+                        Progress Bar
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/progress-bar.png" alt="Progress Bar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Project Tracker + Timeline View -->
+                <div class="toggle-item" id="project-tracker">
+                    <button class="toggle-header">
+                        Project Tracker + Timeline View
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/progress-tracker-timeline-view.png"
+                                alt="Project Tracker + Timeline View">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Ribbon -->
+                <div class="toggle-item" id="ribbon">
+                    <button class="toggle-header">
+                        Ribbon
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/ribbon.png" alt="Ribbon">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Search -->
+                <div class="toggle-item" id="search">
+                    <button class="toggle-header">
+                        Search
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/search.png" alt="Search">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Section Message -->
+                <div class="toggle-item" id="section-message">
+                    <button class="toggle-header">
+                        Section Message
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/section-message.png" alt="Section Message">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Separator -->
+                <div class="toggle-item" id="separator">
+                    <button class="toggle-header">
+                        Separator
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/separator.png" alt="Separator">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Snackbar -->
+                <div class="toggle-item" id="snackbar">
+                    <button class="toggle-header">
+                        Snackbar
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/snackbar.png" alt="Snackbar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Stepper -->
+                <div class="toggle-item" id="stepper">
+                    <button class="toggle-header">
+                        Stepper
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/stepper.png" alt="Stepper">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Tabs -->
+                <div class="toggle-item" id="tabs">
+                    <button class="toggle-header">
+                        Tabs
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/tabs.png" alt="Tabs">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Tags -->
+                <div class="toggle-item" id="tags">
+                    <button class="toggle-header">
+                        Tags
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/tags.png" alt="Tags">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Title Bars -->
+                <div class="toggle-item" id="title-bars">
+                    <button class="toggle-header">
+                        Title Bars
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/title-bars.png" alt="Title Bars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Toggle -->
+                <div class="toggle-item" id="toggle">
+                    <button class="toggle-header">
+                        Toggle
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/toggle.png" alt="Toggle">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Tooltip -->
+                <div class="toggle-item" id="tooltip">
+                    <button class="toggle-header">
+                        Tooltip
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/tooltip.png" alt="Tooltip">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Uploads -->
+                <div class="toggle-item" id="uploads">
+                    <button class="toggle-header">
+                        Uploads
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/uploads.png" alt="Uploads">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Item Video Player -->
+                <div class="toggle-item" id="video-player">
+                    <button class="toggle-header">
+                        Video Player
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="toggle-inner">
+                            <img src="res/design-system-phonepe/video-player.png" alt="Video Player">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="implementation" class="reveal">
+            <div class="layout-text">
+                <h3>Implementation</h3>
+                <p>Once the new design system was complete, we began working with the product teams to
+                    implement it in the PhonePe app. We provided training to the designers and developers on how to use
+                    the new design system and follow the guidelines.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="results" class="reveal">
+            <div class="layout-text">
+                <h3>Results</h3>
+                <p>The new design system has had a significant impact on the consistency of the UI design in the PhonePe
+                    app. The app now looks more polished and professional, and it is easier for users to navigate.
+                </p>
+            </div>
+        </section>
+
+        <section id="benefits" class="reveal">
+            <div class="layout-text">
+                <h3>Benefits</h3>
+                <p>➡️ <b>Consistency:</b> The design system ensures that the UI elements used in the PhonePe app are
+                    consistent across all screens and features. This makes the app easier for users to learn and use.
+                    <br><br>
+                    ➡️ <b>Efficiency:</b> The design system saves designers and developers time by providing them with
+                    pre-built UI components and guidelines. This allows them to focus on creating new features and
+                    improving the user experience.
+                    <br><br>
+                    ➡️ <b>Scalability:</b> The design system is scalable, meaning that it can be easily adapted to meet
+                    the needs of a growing product.
+                </p>
+            </div>
+        </section>
+
+        <section id="conclusion" class="reveal">
+            <div class="layout-text">
+                <h3>Conclusion</h3>
+                <p>PhonePe's new design system is a success story. It has helped to improve the consistency and
+                    efficiency of UI design at PhonePe, and it has made the app easier for designers to learn and use.
+                    The design system is also scalable, meaning that it can be easily adapted to meet the needs of a
+                    growing product.
+                </p>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Nav -->
+        <div class="project-footer-nav">
+            <div style="display: flex; justify-content: space-between;">
+                <a href="index.html#work" style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="material-symbols-outlined">arrow_back</span> Back to Work
+                </a>
+                <a href="kyc-pb.html" style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    Next Project <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2 class="footer-cta">Let's work together.</h2>
+            <div class="nav-links">
+                <a href="mailto:subhajit25mondal@gmail.com"><span class="material-symbols-outlined">mail</span>
+                    Email</a>
+                <a href="https://www.linkedin.com/in/subhajit25mondal/" target="_blank"><span
+                        class="material-symbols-outlined">work</span> LinkedIn</a>
+                <a href="https://dribbble.com/subhajit25mondal" target="_blank"><span
+                        class="material-symbols-outlined">brush</span> Dribbble</a>
+                <a href="https://www.instagram.com/subhajit.explore/" target="_blank"><span
+                        class="material-symbols-outlined">photo_camera</span> Instagram</a>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-copyright">
+                © 2026 Subhajit Mondal ● Created with lots of Procrastination 🥲 & Inspiration ☕️
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

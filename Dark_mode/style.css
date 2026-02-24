@@ -1,0 +1,96 @@
+/* 
+   --------------------------------------------------------
+   DARK MODE STYLES
+   --------------------------------------------------------
+   This file is loaded after global.css and index.css to override variables.
+*/
+
+/* 
+   Theme Toggle Button Style
+*/
+.theme-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: rgba(125, 125, 125, 0.1);
+}
+
+/* 
+   DARK MODE COLOR OVERRIDES 
+   Applied when body has .dark-mode class
+*/
+body.dark-mode {
+    /* Main Background & Text */
+    --bg-color: #0F172A; /* Slate 900 */
+    --text-primary: #F8FAFC; /* Slate 50 */
+    --text-secondary: #94A3B8; /* Slate 400 */
+    
+    /* UI Elements */
+    --card-bg: #1E293B; /* Slate 800 */
+    --accent-color: #60A5FA; /* Blue 400 */
+    --ticker-green: #10B981; /* Emerald 500 */
+    
+    /* Tag Colors (Dark Mode Variations - deeper backgrounds, lighter text) */
+    --tag-bg-purple: #3B0764; /* Purple 950 */
+    --tag-text-purple: #D8B4FE; /* Purple 300 */
+    
+    --tag-bg-blue: #172554; /* Blue 950 */
+    --tag-text-blue: #93C5FD; /* Blue 300 */
+    
+    --tag-bg-green: #052e16; /* Green 950 */
+    --tag-text-green: #6EE7B7; /* Green 300 */
+    
+    /* Background Pattern override for dark mode */
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+}
+
+/* 
+   Specific tweaks for dark mode 
+*/
+body.dark-mode .nav-pill {
+    background: #1E293B;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode footer {
+    background: #0F172A; /* Match body bg */
+    border-top: 1px solid #334155;
+}
+
+body.dark-mode .footer-copyright {
+    border-top: 1px solid #334155;
+}
+
+body.dark-mode .card-arrow {
+    border-color: #334155;
+    color: #94A3B8;
+}
+
+body.dark-mode .project-card:hover .card-arrow {
+    background: #334155;
+    border-color: #334155;
+    color: #fff;
+}
+
+/* Ensure images blend well or stand out */
+body.dark-mode .hero-image {
+    box-shadow: 20px 20px 0 #1E293B;
+}
+
+/* Fix for specific background color classes on cards if they are used */
+body.dark-mode .card-bg-purple,
+body.dark-mode .card-bg-green,
+body.dark-mode .card-bg-blue {
+    background-color: var(--card-bg); /* Unify card backgrounds in dark mode for cleaner look */
+}

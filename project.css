@@ -1,0 +1,354 @@
+/* 
+   --------------------------------------------------------
+   PROJECT PAGE STYLES
+   --------------------------------------------------------
+   Spacing adjusted for better readability and breathability.
+*/
+
+.project-hero {
+    padding-top: 2rem;
+    /* Further reduced from 3.5rem */
+    padding-bottom: 1rem;
+    /* Further reduced from 2rem */
+    /* Removed shorthand padding to preserve .container horizontal padding */
+    text-align: center;
+    max-width: var(--project-text-width);
+    margin: 0 auto;
+}
+
+.project-hero h1 {
+    font-size: 2.2rem;
+    /* Reduced from 2.7rem (~20% decrease) */
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.95rem;
+    /* Slightly smaller meta text */
+    color: var(--text-secondary);
+}
+
+.layout-text {
+    max-width: var(--project-text-width);
+    margin: 3rem auto;
+    /* Slightly tighter vertical margin */
+}
+
+.layout-text h3 {
+    font-size: 1.5rem;
+    /* Reduced from 1.8rem */
+    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+.layout-text p {
+    font-size: 1.15rem;
+    /* Slight adjustment for balance */
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.layout-full-img {
+    width: 100%;
+    max-width: var(--project-container-width);
+    margin: 3rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.layout-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    /* Slightly tighter gap */
+    align-items: center;
+    margin: 5rem auto;
+    max-width: var(--project-container-width);
+}
+
+.layout-split.reverse {
+    direction: rtl;
+}
+
+.layout-split.reverse>* {
+    direction: ltr;
+}
+
+.layout-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: var(--project-container-width);
+}
+
+/* Footer Nav specific to project */
+.project-footer-nav {
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    padding: 3rem 0;
+    /* Vertical padding, horizontal padding inherited from container-narrow */
+    transition: border-color 0.4s ease;
+}
+
+/* Dark Mode Override for Footer Nav */
+body.dark-mode .project-footer-nav {
+    border-color: #334155;
+    /* Matches footer border in dark mode */
+}
+
+/* 
+   --------------------------------------------------------
+   TOGGLE LIST ELEMENT
+   --------------------------------------------------------
+*/
+.toggle-list {
+    margin: 2rem auto;
+    max-width: var(--project-container-width);
+    /* Increased width */
+    border-radius: 12px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.toggle-item {
+    border-bottom: 1px solid #eee;
+}
+
+.toggle-item:last-child {
+    border-bottom: none;
+}
+
+.toggle-header {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.toggle-header:hover {
+    background: #f8fafc;
+}
+
+.toggle-header .material-symbols-outlined {
+    transition: transform 0.3s ease;
+}
+
+.toggle-item.active .toggle-header .material-symbols-outlined {
+    transform: rotate(180deg);
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: #fff;
+}
+
+.toggle-item.active .toggle-content {
+    max-height: 10000px;
+    /* Increased to accommodate very long images */
+    transition: max-height 0.8s cubic-bezier(1, 0, 1, 0);
+}
+
+.toggle-inner {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+}
+
+.toggle-inner img {
+    margin-top: 0.25rem;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Ensure full image is visible */
+}
+
+/* Dark Mode for Toggle */
+body.dark-mode .toggle-list {
+    border-color: #334155;
+}
+
+body.dark-mode .toggle-item {
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .toggle-header,
+body.dark-mode .toggle-content {
+    background: #1e293b;
+    color: var(--text-primary);
+}
+
+body.dark-mode .toggle-header:hover {
+    background: #334155;
+}
+
+/* 
+   --------------------------------------------------------
+   LEGEND WIDGET (STAY-ON-LEFT)
+   --------------------------------------------------------
+*/
+.legend-sidebar {
+    width: 200px;
+    position: fixed;
+    /* Keep it fixed on screen */
+    left: 4rem;
+    /* Spacing from left edge */
+    top: 50%;
+    transform: translateY(-50%);
+    height: fit-content;
+    z-index: 100;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* Subtle dissolve animation */
+}
+
+.legend-sidebar.dissolved {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.legend-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    /* Decreased horizontal spacing between elements */
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+.legend-widget.no-scroll {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+}
+
+/* Custom Scrollbar for Legend */
+.legend-widget::-webkit-scrollbar {
+    width: 4px;
+}
+
+.legend-widget::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.legend-widget::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.legend-widget::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-secondary);
+}
+
+/* Dark Mode Overrides for Legend Scrollbar */
+body.dark-mode .legend-widget {
+    scrollbar-color: #334155 transparent;
+}
+
+body.dark-mode .legend-widget::-webkit-scrollbar-thumb {
+    background-color: #334155;
+}
+
+body.dark-mode .legend-widget::-webkit-scrollbar-thumb:hover {
+    background-color: #475569;
+}
+
+.legend-item {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.35rem 0;
+    /* Decreased vertical spacing */
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.legend-item:hover {
+    color: var(--accent-color);
+}
+
+.legend-item.active {
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Hide Legend Sidebar on Smaller Screens or when container gets too close */
+@media (max-width: 1400px) {
+    .legend-sidebar {
+        left: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .legend-sidebar {
+        display: none;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 968px) {
+    .project-hero {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .layout-split {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin: 3rem auto;
+    }
+
+    .layout-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .layout-text,
+    .layout-full-img {
+        margin: 2.5rem auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-hero h1 {
+        font-size: 1.75rem;
+        /* Adjusted for mobile */
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+/* Specific overrides for wider sections */
+#foundational-elements .layout-text,
+#ui-components .layout-text {
+    max-width: var(--project-container-width);
+}

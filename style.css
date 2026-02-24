@@ -1,0 +1,723 @@
+/* 
+   --------------------------------------------------------
+   CORE STYLES & RESET
+   --------------------------------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #64748B; /* Slate-500 for softer text */
+    --accent-color: #3b82f6; 
+    
+    /* Updated Colors matching reference */
+    --ticker-green: #34D399; /* Mint Green */
+    --card-bg: #F8FAFC; /* Light Grey/Slate-50 */
+    --card-border: transparent; /* Removed border */
+    
+    /* Pastel Tags */
+    --tag-bg-purple: #F3E8FF;
+    --tag-text-purple: #7E22CE;
+    
+    --tag-bg-blue: #DBEAFE;
+    --tag-text-blue: #1D4ED8;
+    
+    --tag-bg-green: #DCFCE7;
+    --tag-text-green: #15803D;
+
+    --border-radius-lg: 32px; /* Larger, softer radius */
+    --border-radius-pill: 999px;
+    
+    --font-heading: 'Manrope', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-hand: 'Caveat', cursive;
+    
+    /* Decreased width for tighter look */
+    --container-width: 1000px; 
+    
+    /* Project Template Widths (Reduced by ~20%) */
+    --project-container-width: 800px;
+    --project-text-width: 600px;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; 
+    overflow-x: hidden; /* Fix horizontal scroll */
+    width: 100%;
+}
+
+body.home-zoom {
+    font-size: 90%; 
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* Fix horizontal scroll */
+    width: 100%;
+    position: relative;
+    /* Subtle dot pattern */
+    background-image: radial-gradient(#E2E8F0 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 
+   --------------------------------------------------------
+   UTILITIES
+   --------------------------------------------------------
+*/
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* New narrower container for Project Page */
+.container-narrow {
+    max-width: var(--project-container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Scroll Animation - DISABLED as per request */
+.reveal {
+    opacity: 1; /* Was 0 */
+    transform: none; /* Was translateY(30px) */
+    /* transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 
+   --------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------
+*/
+nav {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-hand);
+    font-weight: 700;
+    font-size: 2rem;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+}
+
+.nav-pill {
+    background: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius-pill);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 
+   --------------------------------------------------------
+   HERO SECTION
+   --------------------------------------------------------
+*/
+header.hero {
+    padding-top: 10vh; /* Increased top spacing */
+    padding-bottom: 4rem;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered Layout */
+.hero-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-centered h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-centered h1 span.serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Version 2: Split Layout */
+.hero-split-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-split-v2 .hero-text {
+    text-align: left;
+}
+
+.hero-split-v2 h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-split-v2 .hero-subtitle {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 120px 120px 0 0;
+    box-shadow: 20px 20px 0 #f3f4f6;
+}
+
+/* Company Logos Strip */
+.company-logos {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.company-logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #9ca3af;
+    transition: color 0.3s ease;
+}
+
+.company-logo-text:hover {
+    color: var(--text-primary);
+}
+
+
+/* 
+   --------------------------------------------------------
+   MARQUEE (Updated)
+   --------------------------------------------------------
+*/
+.ticker-wrap {
+    width: 100%;
+    background-color: var(--ticker-green);
+    overflow: hidden;
+    padding: 0.35rem 0; /* Significantly reduced height (approx 30%) */
+    margin-bottom: 4rem;
+    white-space: nowrap;
+    position: relative;
+}
+
+.ticker {
+    display: inline-block;
+    animation: marquee 40s linear infinite; /* Slowed down to 20% speed */
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 3rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* 
+   --------------------------------------------------------
+   PROJECTS SECTION
+   --------------------------------------------------------
+*/
+.projects-section {
+    padding: 0 0 6rem 0;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header Area */
+.card-content {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    position: relative;
+}
+
+/* Static Arrow Button Top Right */
+.card-arrow {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #94A3B8;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smoother */
+}
+
+.project-card:hover .card-arrow {
+    background: #fff;
+    border-color: #fff;
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transform: scale(1.1); /* Scale up circle */
+}
+
+/* Arrow inside rotation/movement */
+.card-arrow::before {
+    content: '→';
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* If the HTML just contains text, we can target it directly or use content replacement. 
+   Assuming the text "→" is inside the div. 
+*/
+.project-card:hover .card-arrow {
+    /* Move the arrow text slightly right/up */
+    /* transform is already used on parent, so we rely on font size or inner wrapper if strictly needed. 
+       But since I can't change HTML structure of all cards easily without verbose XML, 
+       I'll rely on the scale transform above which looks good.
+       Or, I can override the text-indent or padding to simulate movement if no inner span.
+    */
+}
+
+
+.project-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-right: 3rem; /* Space for arrow */
+}
+
+.tags-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Pastel Tag Styles */
+.tag {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--border-radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.tag.purple { background-color: var(--tag-bg-purple); color: var(--tag-text-purple); }
+.tag.blue   { background-color: var(--tag-bg-blue); color: var(--tag-text-blue); }
+.tag.green  { background-color: var(--tag-bg-green); color: var(--tag-text-green); }
+
+
+/* Mockup Area */
+.mockup-container {
+    background-color: transparent; /* Seamless blend */
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    height: auto;
+    min-height: 350px;
+    border-top: none;
+}
+
+.mobile-frame {
+    width: 260px;
+    height: auto;
+    background: #111;
+    border-radius: 40px 40px 0 0;
+    padding: 8px 8px 0 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px); /* Peek effect */
+}
+
+.project-card:hover .mobile-frame {
+    transform: translateY(10px); /* Move up slightly on hover */
+}
+
+.mobile-screen {
+    width: 100%;
+    aspect-ratio: 9/19; 
+    background: #fff;
+    border-radius: 32px 32px 0 0;
+    overflow: hidden;
+}
+
+.mobile-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+   --------------------------------------------------------
+   ABOUT SECTION
+   --------------------------------------------------------
+*/
+.about-section {
+    padding: 8rem 0;
+}
+
+.about-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.about-masonry {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 1.5rem;
+}
+
+.masonry-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.masonry-img:hover {
+    transform: scale(1.02);
+}
+
+.masonry-img:nth-child(1) { grid-row: span 2; height: 100%; }
+
+/* 
+   --------------------------------------------------------
+   PROJECT TEMPLATE & UTILITIES
+   --------------------------------------------------------
+*/
+.project-hero {
+    padding: 6rem 0 4rem 0;
+    text-align: center;
+    max-width: var(--project-text-width); /* Reduced width */
+    margin: 0 auto;
+}
+.project-hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+.project-meta { display: flex; justify-content: center; gap: 2rem; font-size: 1rem; color: var(--text-secondary); }
+
+.layout-text { max-width: var(--project-text-width); /* Reduced width */ margin: 4rem auto; }
+.layout-text h3 { font-size: 2rem; margin-bottom: 1.5rem; margin-top: 3rem; }
+.layout-text p { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; }
+
+.layout-full-img { 
+    width: 100%; 
+    max-width: var(--project-container-width); /* Reduced width */
+    margin: 4rem auto; 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+
+.layout-split { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    align-items: center; 
+    margin: 6rem auto; 
+    max-width: var(--project-container-width); /* Reduced width */
+}
+.layout-split.reverse { direction: rtl; } 
+.layout-split.reverse > * { direction: ltr; }
+
+.layout-grid-2 { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 2rem; 
+    margin: 4rem auto; 
+    max-width: var(--project-container-width); /* Reduced width */
+}
+
+footer { padding: 6rem 0; border-top: 1px solid #eee; background: #fff; }
+.footer-cta { font-size: 4rem; margin-bottom: 2rem; }
+
+/* 
+   --------------------------------------------------------
+   MEDIA QUERIES (Mobile & Tablet)
+   --------------------------------------------------------
+*/
+@media (max-width: 968px) {
+    /* Tablet Portrait & Smaller Laptops */
+    body.home-zoom {
+        font-size: 100%; /* Reset zoom for better readability on small screens */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-pill {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .hero-split-v2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-split-v2 .hero-text {
+        text-align: center;
+    }
+    
+    .company-logos {
+        justify-content: center;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+        gap: 3rem;
+    }
+
+    .about-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .layout-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .layout-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        height: 400px;
+        margin: 0 auto;
+        /* Reduce shadow for mobile to prevent overflow */
+        box-shadow: 10px 10px 0 #f3f4f6;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile Devices */
+    .container, .container-narrow {
+        padding: 0 1.5rem;
+        /* Prevent content spilling */
+        overflow: hidden;
+    }
+
+    h1, .hero-centered h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-pill {
+        padding: 0.75rem 1rem;
+    }
+
+    .ticker-item {
+        font-size: 1rem; /* Smaller text */
+        padding: 0 1.5rem;
+    }
+
+    .project-card:hover {
+        transform: none; /* Disable hover lift on touch */
+    }
+
+    .card-content {
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
+    
+    .card-arrow {
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .mobile-frame {
+        width: 80%; /* Fluid width for mockup */
+        min-width: 200px;
+    }
+    
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-cta {
+        font-size: 2.5rem;
+    }
+    
+    .about-masonry {
+        /* Simplify grid for mobile */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .masonry-img {
+        height: 300px;
+    }
+    
+    .project-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
