@@ -8,10 +8,8 @@
    HERO SECTION
 */
 header.hero {
-    padding-top: 9.3vh;
-    /* Reduced by ~7% from 10vh */
-    padding-bottom: 3.7rem;
-    /* Reduced by ~7% from 4rem */
+    padding-top: 5vh;
+    padding-bottom: 1.5rem;
     min-height: auto;
     display: flex;
     align-items: center;
@@ -81,7 +79,7 @@ header.hero {
 .hero-subtitle {
     font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -89,6 +87,54 @@ header.hero {
     /* Slight delay for subtitle entrance */
     opacity: 0;
     animation: fadeInUpSoft 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.3s;
+}
+
+/* Companies Section */
+.companies-section {
+    margin-top: 2.5rem;
+    animation: fadeInUpSoft 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.5s;
+    opacity: 0;
+}
+
+.companies-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.companies-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.company-logo-png {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.company-logo-png:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+body.dark-mode .company-logo-png {
+    filter: grayscale(100%) brightness(200%);
+    opacity: 0.7;
+}
+
+body.dark-mode .company-logo-png:hover {
+    filter: grayscale(0%) brightness(100%);
+    opacity: 1;
 }
 
 /* Split Layout (Version 2) */
